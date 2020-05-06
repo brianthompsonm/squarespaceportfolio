@@ -1,0 +1,68 @@
+/*STICKY HEADER NAV BAR*/
+
+.Header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0px 0px 0px 0px #736C5F;
+  opacity: 0.9
+}
+
+.Site-inner {
+  padding-top: 127px;
+}
+
+/*HOVER EFFECT*/
+
+.Header-nav-item::after {
+  content: '';
+  background: #000;
+  height: 2px;
+  width: 0;
+  display: block;
+  margin-top: 1px !important;
+  transition: width 0.3s;
+  margin: 0 auto;
+}
+
+.Header-nav-item:hover::after {
+  width: 100%;
+}
+
+.Footer-nav-item::after {
+  content: '';
+  background: #000;
+  height: 2px;
+  width: 0;
+  display: block;
+  margin-top: 1px !important;
+  transition: width 0.3s;
+  margin: 0 auto;
+}
+
+.Footer-nav-item:hover::after {
+  width: 100%;
+}
+
+/*GROW HOVER EFFECT FOR BLOG LIST THUMBNAILS*/
+
+.BlogList-item-image {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+      -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+          transition-property: transform;
+}
+
+.BlogList-item-image:hover,
+.BlogList-item-image:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
